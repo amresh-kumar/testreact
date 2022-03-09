@@ -1,0 +1,85 @@
+body,
+html {
+  font-family: $regular;
+  font-size: 16px;
+  color: #000000;
+  background-color: #f3f3f3;
+  // overflow: overlay !important;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+.anchor {
+  text-decoration: underline;
+  color: #000000;
+
+  &:hover {
+    color: #ac9657;
+  }
+}
+
+[role="presentation"] {
+  cursor: pointer;
+}
+
+.Input,
+.FormField,
+.Select,
+.FormCheckbox {
+  position: relative;
+
+  .field-errors {
+    color: $error;
+    font-size: 0.75rem;
+    position: absolute;
+    font-size: 0.75rem;
+    right: 0.3125rem;
+    bottom: -1rem;
+  }
+}
+
+.MuiFormControlLabel-root {
+  .MuiCheckbox-colorSecondary {
+    &.Mui-checked {
+      color: rgb(237, 29, 36);
+    }
+  }
+  .MuiFormControlLabel-label {
+    font-family: $medium;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}

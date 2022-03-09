@@ -1,0 +1,33 @@
+@import "../../assets/styles/global/_global-dir";
+
+.market-share {
+  position: relative;
+  background: url("../../assets/images/svg/marketshare_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .landing-wrapper {
+    position: relative;
+    margin: 0 5rem;
+    .landing-header {
+      min-height: 8.75rem;
+      @include display;
+      @include direction;
+      @include justify(center);
+      margin-bottom: 1.25rem;
+      .title {
+        font-size: 1.875rem;
+        font-family: $medium;
+      }
+      .desp {
+        padding-top: 0.3125rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  .page-header {
+    .title-label {
+      .title {
+        color: #F44B69;
+      }
+    }
+  }
+}

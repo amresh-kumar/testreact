@@ -1,0 +1,51 @@
+@import "../../assets/styles/global/_global-dir";
+
+.CompetitiveComparision-page {
+  position: relative;
+  background: url("../../assets/images/svg/competitive_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .CompetitiveComparision-page-wrapper {
+    margin: 0 5rem;
+  }
+  .page-header {
+    .title-label {
+      .title {
+        color: #1e81f5;
+      }
+    }
+  }
+  .tablelist-header {
+    padding: 0 1.25rem;
+    .tablelist-header-contents {
+      font-family: $medium;
+      div {
+        padding: 0;
+      }
+      .vertical-border {
+        margin: 1.875rem;
+        height: 40px;
+        margin: 0 30px;
+      }
+      .percentage {
+        padding-right: 0.3125rem;
+      }
+      .Value {
+        padding-left: 0.3125rem;
+      }
+    }
+    .compcompare-filter {
+      @include display;
+      @include align;
+      .compcompare-dropdown {
+        @include display;
+        @include align;
+        margin-left: 0.625rem;
+
+        .Select {
+          min-width: 12.25rem;
+          margin-left: 0.625rem;
+        }
+      }
+    }
+  }
+}

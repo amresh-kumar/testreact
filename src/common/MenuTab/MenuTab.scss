@@ -1,0 +1,148 @@
+@import "../../assets/styles/global/_global-dir";
+
+.menu-tab {
+  min-height: 7.5rem;
+  @include display;
+  @include align;
+  .MuiBox-root {
+    width: 100%;
+    .MuiTabs-root {
+      min-height: 2.5rem;
+      .MuiTabs-scroller {
+        .MuiTabs-indicator {
+          display: none;
+        }
+        .MuiTabs-flexContainer {
+          .MuiTab-root {
+            min-width: fit-content;
+            min-height: 2.5rem;
+            margin: 0 0.3125rem;
+            padding: 0.625rem 1.25rem;
+            border-radius: 3.125rem;
+            opacity: 0.9;
+            .MuiTab-wrapper {
+              .label {
+                @include display;
+                @include align;
+                margin-bottom: 0;
+                .FontIcon {
+                  padding-right: 0.75rem;
+                }
+                .tabLabel {
+                  font-family: $medium;
+                  font-size: 0.875rem;
+                }
+              }
+            }
+            &.tab-summary {
+              background-color: #ffb1001a;
+              border: 1px solid #ffb10099;
+              .label {
+                color: #ffb100;
+              }
+              &.Mui-selected {
+                background-color: #ffb100;
+                border: 1px solid #ffb100;
+              }
+            }
+            &.tab-comparison {
+              background-color: #0032d81a;
+              border: 1px solid #0032d899;
+              .label {
+                color: #0032d8;
+              }
+              &.Mui-selected {
+                background-color: #0032d8;
+                border: 1px solid #0032d8;
+              }
+            }
+            &.tab-performance {
+              background-color: #1ed7601a;
+              border: 1px solid #1ed760;
+              .label {
+                color: #1ed760;
+              }
+              &.Mui-selected {
+                background-color: #1ed760;
+                border: 1px solid #1ed760;
+              }
+            }
+            &.tab-share {
+              background-color: #f44b691a;
+              border: 1px solid #f44b6999;
+              .label {
+                color: #f44b69;
+              }
+              &.Mui-selected {
+                background-color: #f44b69;
+                border: 1px solid #f44b69;
+              }
+            }
+            &.tab-tracks {
+              background-color: #8f65ff1a;
+              border: 1px solid #8f65ff99;
+              .label {
+                color: #8f65ff;
+              }
+              &.Mui-selected {
+                background-color: #8f65ff;
+                border: 1px solid #8f65ff;
+              }
+            }
+            &.tab-artists {
+              background-color: #e9008f1a;
+              border: 1px solid #e9008f99;
+              .label {
+                color: #e9008f;
+              }
+              &.Mui-selected {
+                background-color: #e9008f;
+                border: 1px solid #e9008f;
+              }
+            }
+            &.tab-lang {
+              background-color: #21a8ae1a;
+              border: 1px solid #21a8ae99;
+              .label {
+                color: #21a8ae;
+              }
+              &.Mui-selected {
+                background-color: #21a8ae;
+                border: 1px solid #21a8ae;
+              }
+            }
+            &.tab-competitive {
+              background-color: #4d9fff1a;
+              border: 1px solid #4d9fff99;
+              .label {
+                color: #4d9fff;
+              }
+              &.Mui-selected {
+                background-color: #4d9fff;
+                border: 1px solid #4d9fff;
+              }
+            }
+            &.tab-benchmarks {
+              background-color: #0db9651a;
+              border: 1px solid #0db96599;
+              .label {
+                color: #0db965;
+              }
+              &.Mui-selected {
+                background-color: #0db965;
+                border: 1px solid #0db965;
+              }
+            }
+            &.Mui-selected {
+              .MuiTab-wrapper {
+                .label {
+                  color: #ffffff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

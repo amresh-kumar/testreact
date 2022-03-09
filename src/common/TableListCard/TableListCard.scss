@@ -1,0 +1,67 @@
+@import "../../assets/styles/global/_global-dir";
+
+.tablelistcard {
+  .MuiTableContainer-root {
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    .MuiTable-root {
+      background-color: rgb(255, 255, 255);
+      table-layout: fixed;
+      .MuiTableHead-root {
+        .MuiTableRow-root {
+          height: 3.75rem;
+          background-color: rgba(0, 0, 0, 0.02);
+          .MuiTableCell-root {
+            font-size: 0.875rem;
+            font-family: $medium;
+            text-transform: uppercase;
+            padding: 0rem 1.25rem;
+          }
+        }
+      }
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          background-color: rgba(255, 255, 255, 0.4);
+          height: 4rem;
+          .MuiTableCell-body {
+            font-size: .875rem;
+            font-family: $medium;
+            padding: 0rem 1.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .track-name-artist {
+              @include display;
+              @include align;
+              .track-image {
+                min-width: 40px;
+                max-width: 40px;
+                @include border-radius(5px);
+                overflow: hidden;
+                @include display;
+                @include align;
+                img {
+                  @include border-radius(5px);
+                }
+              }
+              .track-name {
+                font-size: .875rem;
+                padding-left: 1rem;
+                min-width: 0;
+              }
+            }
+            .track-streams {
+              font-size: .875rem;
+            }
+          }
+        }
+      }
+    }
+    .MuiTablePagination-root.table-pagination {
+      min-height: 3.25rem;
+      padding-right: 0.125rem;
+      background-color: rgb(255, 255, 255);
+      padding: 1.25rem;
+    }
+  }
+}

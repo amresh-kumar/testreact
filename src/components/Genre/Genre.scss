@@ -1,0 +1,17 @@
+@import "../../assets/styles/global/_global-dir";
+
+.genre-page {
+  position: relative;
+  background: url("../../assets/images/svg/genre_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .genre-wrapper {
+    margin: 0 5rem;
+    .page-header {
+      .title-label {
+        .title {
+          color: #21a8ae;
+        }
+      }
+    }
+  }
+}

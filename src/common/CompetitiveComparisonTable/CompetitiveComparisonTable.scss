@@ -1,0 +1,93 @@
+@import "../../assets/styles/global/_global-dir";
+
+.competitivecomparison-table {
+  .tablelist-content {
+    .MuiTableContainer-root {
+      .MuiTable-root {
+        .MuiTableHead-root {
+          .MuiTableRow-head {
+            .MuiTableCell-head {
+              font-size: 1rem;
+              opacity: 0.5;
+              padding: 0 1.875rem;
+              .genre-title {
+                @include display;
+                @include align;
+                .FontIcon {
+                  padding-right: 0.625rem;
+                }
+              }
+            }
+          }
+        }
+        .MuiTableBody-root {
+          .MuiTableRow-root {
+            height: 6.25rem;
+            .MuiTableCell-body {
+              font-size: 1rem;
+              padding: 0 1.875rem;
+              .genre-label {
+                font-size: 1.125rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//for competitive comparison table
+.competitive-table {
+  .tablelist-header {
+    @include direction;
+    @include justify(space-between);
+    width: 100%;
+    .top-tablelist-header {
+      @include flex-d(flex, space-between, center);
+      width: 100%;
+      min-height: 3.125rem;
+    }
+    .compcompare-filter {
+      min-height: 3.125rem;
+      width: 100%;
+      @include justify(flex-end);
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+
+
+.toggle-switch {
+  .MuiFormControlLabel-root {
+    margin: 0;
+    .MuiSwitch-root {
+      padding: 0px;
+      width: 1.875rem;
+      height: 0.875rem;
+      .MuiButtonBase-root {
+        color: rgb(245, 0, 87);
+        padding: 0px;
+        .MuiIconButton-label {
+          .MuiSwitch-thumb {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      .MuiSwitch-switchBase.Mui-disabled {
+        color: #bdbdbd !important;
+      }
+      .MuiSwitch-colorSecondary.Mui-disabled + .MuiSwitch-track {
+        background-color: #000 !important;
+      }
+      .MuiSwitch-switchBase.Mui-checked {
+        transform: translateX(16px);
+      }
+      .MuiSwitch-track {
+        background-color: rgba(237, 29, 36, 0.302);
+      }
+    }
+  }
+}

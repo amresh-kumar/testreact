@@ -1,0 +1,182 @@
+@import "../../assets/styles/global/_global-dir";
+
+.ChartCompareTable {
+  width: 100%;
+  font-family: $medium;
+  .ChartCompare-content { 
+    .flag-chart{
+      @include display;
+      position: relative;
+      overflow-x: scroll;
+      background-color: rgb(255, 255, 255);
+      z-index: 1;
+      .track-details {
+        width: 25vw;
+        position: sticky;
+        left: 0;
+        z-index: 3;
+        background-color: rgb(255, 255, 255);
+        .track-header {
+          background-color: rgba(0, 0, 0, 0.02);
+          z-index: 3;
+          min-height: 7.5rem;
+          @include flex-d(flex, flex-start, center);
+          font-size: .875rem;
+          border-bottom: 1px solid #ebedf0;
+          .track-number{
+            flex: 0 0 20%;
+            max-width: 20%;
+            @include flex-d(flex, center, center);
+          }
+          .track-title{
+            flex: 0 0 80%;
+            max-width: 80%;
+          }
+        }
+        .track-body {
+          background-color: rgb(255, 255, 255);
+          min-height: 5rem;
+            .track-data-list{
+              border-bottom: 1.5px solid rgba(17, 17, 17, 0.1);
+              background-color: rgb(255, 255, 255);
+              min-height: 5rem;
+              font-size: 1.125rem;
+              @include flex-d(flex, center, center);
+              .track-number{
+                flex: 0 0 20%;
+                max-width: 20%;
+                @include flex-d(flex, center, center);
+              }
+              .track-image{
+                flex: 0 0 12%;
+                max-width: 12%;
+                >div{
+                  min-width: 2.5rem;
+                  max-width: 2.5rem;
+                  img{
+                    @include border-radius(5px);
+                  }
+                }
+              
+              }
+              .track-title{
+                flex: 0 0 68%;
+                max-width: 68%;
+                padding-left: 1.125rem;
+              }
+            }
+        }
+      }
+      .flag-details {
+        background-color: rgba(0, 0, 0, 0.02);
+        z-index: 2;
+       .flag-header {
+         min-height: 7.5rem;
+         @include flex-d(flex, flex-start, center);
+          font-size: .875rem;
+          border-bottom: 1px solid #ebedf0;
+          @include display;
+          .flag-list{
+           @include flex-d(flex, flex-start, center);
+           @include direction;
+           min-width: 5.625rem;
+           .flag-name{
+             padding-top: 1rem;
+             text-transform: uppercase;
+             text-align: center;
+           }
+          }
+       }
+       .flag-body {
+        font-size: .875rem;
+        min-height: 5rem;
+        background-color: rgb(255, 255, 255);
+          .flag-list{
+            border-bottom: 1.5px solid rgba(17, 17, 17, 0.1);
+            @include flex-d(flex, flex-start, center);
+            font-size: 1rem;
+            background-color: rgb(255, 255, 255);
+            min-height: 5rem;
+            .flag {
+              min-width: 5.625rem;
+              @include flex-d(flex, center, center);
+               .flag-background {
+                //  background-color: aqua;
+                  border-radius: 100%;
+                  border-radius: 100%;
+                  width: 45px;
+                  height: 45px;
+                @include flex-d(flex, center, center);
+               }
+            }
+         }
+       }
+      }
+    }
+  }
+}
+
+
+
+.city-chart-compare {
+  .flag-chart {
+    .single-flag-details {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.02);
+      z-index: 2;
+     .flag-header {
+       min-height: 7.5rem;
+       padding-right: 1rem;
+       @include flex-d(flex, flex-end, center);
+        font-size: .875rem;
+        border-bottom: 1px solid #ebedf0;
+        @include display;
+        .flag-list{
+         @include flex-d(flex, flex-start, center);
+         @include direction;
+         min-width: 6.25rem;
+         .flag-name{
+          padding-top: unset;
+           text-transform: uppercase;
+           text-align: center;
+         }
+        }
+     }
+     .flag-body {
+      padding-right: 1rem;
+      font-size: .875rem;
+      min-height: 5rem;
+      background-color: rgb(255, 255, 255);
+        .flag-list{
+          border-bottom: 1.5px solid rgba(17, 17, 17, 0.1);
+          @include flex-d(flex, flex-end, center);
+          font-size: 1rem;
+          background-color: rgb(255, 255, 255);
+          min-height: 5rem;
+          .flag {
+            min-width: 6.25rem;
+            @include flex-d(flex, center, center);
+             .flag-background {
+              //  background-color: aqua;
+                border-radius: 100%;
+                border-radius: 100%;
+                width: 45px;
+                height: 45px;
+              @include flex-d(flex, center, center);
+             }
+          }
+       }
+     }
+    }
+  }
+}
+
+.MuiTablePagination-root.table-pagination {
+  padding-right: 2px;
+  min-height: 5rem;
+  @include flex-d(flex, flex-end, center);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-bottom-left-radius: .625rem;
+  border-bottom-right-radius: .625rem;
+}

@@ -1,0 +1,162 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-entires {
+  margin: 2rem 0rem;
+  .title {
+    min-height: 5rem;
+    @include display;
+    @include align;
+    .label {
+      font-size: 1.125rem;
+      font-family: $medium;
+    }
+  }
+  // /* the slides */
+  // .slick-slide {
+  //   margin-left:24px;
+  // }
+
+  // /* the parent */
+  // .slick-list {
+  //   margin-left:-24px;
+  // }
+  .wrapper {
+    .slick-slider {
+      .slick-arrow {
+        z-index: 1;
+        top: 35%;
+        // width: 40px;
+        // height: 40px;
+        // background-color: white;
+        // @include border-radius(50px);
+        &.slick-prev {
+          left: 10px !important;
+        }
+        &.slick-next {
+          right: 35px !important;
+        }
+
+        &.slick-prev:before {
+          font-size: 45px;
+        }
+
+        &.slick-next:before {
+          font-size: 45px;
+        }
+        //  &.slick-prev:before {
+        //   content: "<";
+        //   color: rgb(112, 112, 112);
+        //   font-size: 30px;
+        // }
+        // &.slick-next:before {
+        //   content: ">";
+        //   color: rgb(112, 112, 112);
+        //   font-size: 30px;
+        // }
+      }
+      .slick-list {
+        .slick-track {
+          margin: 0;
+          .slick-slide {
+            div {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.artist-wrapper {
+  position: relative;
+  min-width: 190px;
+  max-width: 190px;
+  margin-left: auto;
+  .thumbnail-img {
+    position: relative;
+    height: 11.875rem;
+    margin: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      @include border-radius(0.625rem);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 11.875rem;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      @include border-radius(0.625rem);
+    }
+    div {
+      color: #ffffff;
+      .rank {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        @include display;
+        @include align;
+        min-height: 1.25rem;
+        padding: 0.3125rem 0.625rem;
+        background-color: #ed1e24;
+        border-radius: 2.5rem;
+        font-size: 0.625rem;
+      }
+    }
+    .label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      @include display;
+      @include align;
+      min-height: 1.25rem;
+      padding: 0 0.475rem;
+      background-color: #000000;
+      border-radius: 0.3125rem;
+      font-size: 0.625rem;
+      text-transform: uppercase;
+    }
+  }
+  .chart-desp {
+    padding: 0.9375rem;
+    .chart-title {
+      font-family: $medium;
+      font-size: 0.875rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .chart-artist {
+      font-size: 0.6875rem;
+      margin-top: 0.3125rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .artist-details {
+    position: absolute;
+    bottom: 55px;
+    right: 10px;
+    padding: 0.5rem;
+    font-family: $bold;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    @include border-radius(0.625rem);
+    text-align: right;
+    .track-count {
+      @include display;
+      @include direction;
+      text-shadow: 1px 1px 2px #0000004d;
+      .track-title {
+        font-family: $regular;
+        font-size: 0.65rem;
+      }
+      .count {
+        font-size: 1.4625rem;
+      }
+    }
+  }
+}

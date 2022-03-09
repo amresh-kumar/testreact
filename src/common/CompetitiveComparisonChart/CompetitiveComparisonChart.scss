@@ -1,0 +1,15 @@
+@import "../../assets/styles/global/_global-dir";
+
+.compcompare {
+  .chart-filter {
+    .filter {
+      .Select {
+        .FormSelect {
+          .select-root {
+            min-width: 14.375rem;
+          }
+        }
+      }
+    }
+  }
+}

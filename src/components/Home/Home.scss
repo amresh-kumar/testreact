@@ -1,0 +1,69 @@
+@import "../../assets/styles/global/_global-dir";
+
+.landing-page {
+  .banner-carousel {
+    position: relative;
+    .sort-date {
+      position: absolute;
+      bottom: 0;
+      min-height: 10rem;
+      padding: 0 5rem;
+      @include flex-d;
+      width: 100%;
+    }
+  }
+  .landing-wrapper {
+    position: relative;
+    margin: 0 5rem;
+    .landing-header {
+      min-height: 8.75rem;
+      @include display;
+      @include direction;
+      @include justify(center);
+      margin-bottom: 1.25rem;
+      .title {
+        font-size: 1.875rem;
+        font-family: $medium;
+      }
+      .desp {
+        padding-top: 0.3125rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.dsp {
+  @include display;
+  @include align;
+  color: #ffffff;
+  font-size: 0.875rem;
+  .spotify-logo {
+    padding: 0 1.25rem;
+  }
+}
+
+.tablelist-header {
+  @include flex-d;
+  min-height: 5rem;
+  padding: 0 0rem 0rem 2rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(235, 237, 240);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  .tablelist-header-title {
+    text-align: left;
+    font-size: 1.25rem;
+    letter-spacing: 0.4px;
+    font-family: $medium;
+  }
+  .tablelist-header-contents {
+    @include flex-d;
+    div {
+      padding: 0rem 2rem;
+    }
+    .vertical-border {
+      border-left: 1px solid rgba(112, 112, 112, 0.2);
+    }
+  }
+}
+

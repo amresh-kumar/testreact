@@ -1,0 +1,39 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-wrapper {
+  background: rgba(255, 255, 255, 1);
+  @include border-radius(10px);
+  padding: 0 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  padding-bottom: 1.25rem;
+  .chart-filter {
+    @include flex-d;
+    min-height: 5rem;
+    margin-bottom: 1.25rem;
+    .chart-title {
+      font-size: 1.25rem;
+      font-family: $medium;
+    }
+    .filter {
+      @include display;
+      @include align;
+      font-size: 1rem;
+      .view {
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .Select {
+        margin-left: 0.625rem;
+        .FormSelect {
+          .select-root {
+            min-width: 11.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.city-chart-wrapper {
+  margin-bottom: 0rem;
+}

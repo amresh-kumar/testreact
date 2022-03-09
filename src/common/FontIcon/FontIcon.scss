@@ -1,0 +1,46 @@
+.FontIcon {
+  color: rgb(0, 0, 0);
+  // color
+  &.inherit {
+    color: inherit;
+  }
+
+  //color
+  &.grey {
+    color:rgba(0, 0, 0, 0.5);
+  }
+  
+  //size
+  &.default {
+    font-size: 1.875rem; //30px
+    background-color: transparent;
+  }
+  &.small {
+    font-size: 1.25rem; //20px
+  }
+
+  &.medium {
+    font-size: 1.5rem; //24px
+  }
+
+  &.large {
+    font-size: 1.875rem; //30px
+  }
+
+}
+
+//for ripple effect
+
+.react-ripples:hover {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+.react-ripples {
+  padding: 0.5rem !important;
+  border-radius: 100%;
+  justify-content: center;
+  s {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+

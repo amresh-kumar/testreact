@@ -1,0 +1,176 @@
+@import "../../../assets/styles/global/_global-dir";
+
+.top-labels {
+  @include flex-d(flex, center, center);
+  background-color: rgb(255, 255, 255);
+  border-top: 1.5px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1.5px solid rgba(17, 17, 17, 0.1);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  min-height: 4.375rem;
+  .labels {
+    min-width: 8.125rem;
+    min-height: 3.125rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    @include border-radius(10px);
+    margin-right: 0.9375rem;
+    @include flex-d(flex, center, center);
+    font-family: $medium;
+    font-size: 0.875rem;
+    letter-spacing: 0.28px;
+    color: #313131;
+    > div {
+      min-width: 6.875rem;
+      max-width: 6.875rem;
+      min-height: 25px;
+      max-height: 25px;
+    }
+  }
+  .indie-label {
+    margin-right: unset;
+  }
+}
+.MuiDialog-root.label-modal {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      .MuiDialogTitle-root {
+        border-bottom: unset;
+      }
+      .MuiDialogContent-root {
+        margin-top: 0rem;
+        .modal-wrapper {
+        padding-top: 5rem;
+        }
+      }
+    }
+  }
+}
+
+.modal-filter {
+  .MuiDialog-container {
+    .MuiDialog-paper {
+      height: 50%;
+      .MuiDialogTitle-root {
+        @include display;
+        @include align;
+        min-height: 4.375rem;
+        padding: 0 1.875rem;
+        background-color: rgba(0, 0, 0, 0.02);
+        .MuiTypography-root {
+          @include flex-d;
+          width: 100%;
+          .modal-title {
+            @include display;
+            @include align;
+            div {
+              font-family: $medium;
+              font-size: 1.125rem;
+              color: #313131;
+              padding-left: 0.625rem;
+            }
+          }
+          .reset {
+            @include display;
+            @include align;
+            .Button {
+              margin-right: 0.9375rem;
+            }
+          }
+        }
+      }
+      .MuiDialogContent-root {
+        margin-top: 1.25rem;
+        margin-bottom: 1.875rem;
+        .modal-wrapper {
+          .Input {
+            padding: 0 1.875rem;
+          }
+          ul {
+            @include display;
+            @include align;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &::after {
+              content: "";
+              width: 33%;
+            }
+            li {
+              list-style: none;
+              flex-grow: 1;
+              width: 33%;
+              font-size: 0.875rem;
+              font-family: $medium;
+              line-height: 2rem;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              padding: 0 1.875rem;
+              &:hover {
+                color: #ef4d52;
+              }
+              .country-flags{
+                @include display;
+                @include align;
+                margin-bottom: 1rem;
+                span {
+                  padding-left: 1rem;
+                  font-size: 0.875rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.small {
+    .MuiDialog-container {
+      .MuiDialog-paper {
+        height: 17.8125rem;
+        min-width: 21.875rem;
+        width: auto;
+      }
+      .MuiDialogContent-root {
+        .modal-wrapper {
+          ul {
+            display: block;
+            li {
+              list-style: none;
+              font-size: 0.875rem;
+              font-family: $medium;
+              line-height: 2rem;
+              overflow: unset;
+              padding: 0 1.875rem;
+              &:hover {
+                color: #ef4d52;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.xsmall {
+    .MuiDialog-container {
+      .MuiDialog-paper {
+        height: 11.875rem;
+      }
+    }
+  }
+}
+
+.region-filter {
+  .MuiDialog-container {
+    .MuiDialog-paper {
+      .MuiDialogTitle-root {
+        .MuiTypography-root {
+          .react-ripples {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

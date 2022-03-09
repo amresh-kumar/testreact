@@ -1,0 +1,87 @@
+@import "../../assets/styles/global/_global-dir";
+
+.pie-chart-wrapper {
+  background: rgba(255, 255, 255, 1);
+  @include border-radius(10px);
+  padding: 0 1.875rem;
+  margin-top: 2.5rem;
+  padding-bottom: 1.25rem;
+  .chart-filter {
+    @include flex-d;
+    min-height: 5rem;
+    margin-bottom: 1.25rem;
+    .chart-title {
+      font-size: 1.25rem;
+      font-family: $medium;
+      @include display;
+      @include align;
+      letter-spacing: 0.4px;
+      color: #313131;
+      .FontIcon {
+        margin-right: 1rem;
+      }
+    }
+    .filter {
+      @include display;
+      @include align;
+      font-size: 1rem;
+      .view {
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .Select {
+        margin-left: 0.625rem;
+        .FormSelect {
+          .select-root {
+            min-width: 11rem;
+          }
+        }
+      }
+    }
+  }
+  .pie-line-chart {
+    @include flex-d;
+    .pie-chart {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+    .line-chart {
+      flex: 0 0 55%;
+      max-width: 55%;
+    }
+  }
+  .pie-chart-label {
+    @include display;
+    @include justify(center);
+
+    .chart-label {
+      @include display;
+      padding: 0rem 1rem;
+      > div {
+        margin-right: 1rem;
+        min-width: 1.25rem;
+        min-height: 0.9375rem;
+        border-radius: 100%;
+      }
+      &.indie-label {
+        > div {
+          background-color: #cfcfd0;
+        }
+      }
+      &.sme-label {
+        > div {
+          background-color: #f76161;
+        }
+      }
+      &.umg-label {
+        > div {
+          background-color: #fbbc67;
+        }
+      }
+      &.wmg-label {
+        > div {
+          background-color: #4fb4fe;
+        }
+      }
+    }
+  }
+}

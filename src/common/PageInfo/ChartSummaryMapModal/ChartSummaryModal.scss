@@ -1,0 +1,101 @@
+@import "../../../assets/styles/global/_global-dir";
+
+h1{
+    cursor:pointer;
+}
+
+.MuiDialog-root {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      box-shadow: 0px 6px 10px #00000029;
+      border: 1px solid #70707019;
+      .MuiDialogTitle-root {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        height: 4.375rem;
+        @include flex-d;
+        margin-left: auto;
+        background: rgba(255, 255, 255, 0.02);
+        .MuiTypography-root {
+          width: 100%;
+          @include flex-d(flex,space-between, center);
+          font-size: 1rem;
+          font-family: $medium;
+          .modal-title{
+            @include display;
+            @include align;
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+            .FontIcon{
+              margin-right: 1rem;
+            }
+            .chart-title{
+              @include display;
+              @include direction(column);
+              margin-bottom: unset;
+            
+              .modal-subtext{
+                font-size: .875rem;
+                opacity: 0.7;
+              }
+            }
+          }
+          .cross-icon{
+            border-left: unset;
+              padding-left: 2rem;
+              @include flex-d(flex, center, center);
+              .FontIcon{
+                  font-size: 1.5rem;
+              }
+          }
+        }
+
+      }
+      .MuiDialogContent-root {
+        font-family: $regular;
+        font-size: .875rem;
+        .chart-modal-content{
+          padding: 1.25rem;
+          .modal-title{
+            font-family: $bold;
+            font-size: 1rem;
+            letter-spacing: 0.28px;
+            margin-bottom: .625rem;
+          }
+          .modal-subtext, li{ 
+            letter-spacing: 0.28px;
+            color: #000000;
+         }
+         .chart-points{
+          margin-bottom: 1.25rem;
+           .modal-title{
+            font-size: .875rem;
+           }
+           .modal-subtext{
+              padding-left: 2.5rem;  
+              letter-spacing: 0.28px;
+              color: #000000;
+           }
+         }
+        }
+      }
+    }
+    // .model-template {
+    //   .MuiDialog-paperWidthSm {
+    //     max-width: 800px !important; 
+    //   }
+    // }
+  }
+}
+
+
+
+
+

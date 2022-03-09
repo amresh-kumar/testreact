@@ -1,0 +1,126 @@
+@import "../../assets/styles/global/_global-dir";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  transform: translateY(0);
+  transition: transform 0.6s ease;
+  .header-wrapper {
+    @include flex-d(flex, space-between, center);
+    background: transparent;
+    min-height: 5rem;
+    padding: 0 5rem;
+    .app-logo {
+      width: 12.5rem;
+    }
+    .header-action {
+      @include display;
+      @include align;
+      >div {    
+         @include display;
+        @include align;
+        .Select {
+          .FormSelect {
+            .select-root {
+              min-width: 10rem;
+              color: rgba(255, 255, 255, 0.8);
+              border: 1px solid #00000026;
+              background-color: rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+        .filter-dropdown {
+          color: rgba(255, 255, 255, 0.8);
+          border: 1px solid #00000026;
+          background-color: rgba(255, 255, 255, 0.15);
+          @include flex-d(flex, space-between, center);
+          padding-right: 0.3125rem;
+          .FontIcon {
+            color: rgba(255, 255, 255, 0.8);
+          }
+          .location {
+            @include display;
+            @include align;
+            .FontIcon {
+              margin-right: 0.625rem;
+            }
+          }
+        }
+      }
+        .display-calendar {
+          visibility: hidden ;
+        }
+        .display-calendar-active{
+          visibility: visible;
+        }
+      .user {
+        @include flex-d(flex, center, center);
+        width: 2.5rem;
+        height: 2.5rem;
+        @include border-radius(50%);
+        margin-left: 1.875rem;
+        background-color: #00cadb;
+        color: #ffffff;
+
+        .user-name {
+          font-size: 0.875rem;
+          font-family: $medium;
+        }
+      }
+    }
+  }
+  &.active {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(10);
+    transition: transform 6s ease;
+    animation: myanimation 3s;
+  }
+  .date-sort {
+    .calendar-component {
+      .date-content {
+        @include display;
+        @include align;
+        @include border-radius(5px);
+        color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255,255,255,0.05);
+        background: rgba(255, 255, 255, 0.15);
+        margin-right: 0.625rem;
+        min-height: 2.5rem;
+        padding: 0 0.9375rem;
+        .FontIcon {
+          color: rgba(255, 255, 255, 0.8);
+        }
+        div {
+          font-size: 1rem;
+          padding-left: 0.75rem;
+        }
+      }
+    }
+  }
+  .country-display {
+    height: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: $medium;
+    padding: 0rem 1.25rem;
+    margin-right: 1.5rem;
+    @include border-radius(0.3125rem);
+    .FontIcon.icon-globe {
+      color: rgba(255, 255, 255, 0.4);
+      padding-right: 1rem;
+    }
+  }
+}
+@keyframes myanimation {
+  0% {
+    background-color: transparent;
+  }
+  35% {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}

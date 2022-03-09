@@ -1,0 +1,246 @@
+@import "../../assets/styles/global/_global-dir";
+
+.trackDetails {
+  font-family:  $medium;
+  .banner-wrapper {
+    position: relative;
+    .track-banner{
+      width: 100%;
+      min-height: 43.75rem;
+      background: no-repeat  center;
+      background-size: cover;
+      @include display;
+      @include align;
+      padding: 0rem 5rem;
+      filter: blur(6px);
+      -webkit-filter: blur(6px);
+      z-index: 1;
+    }
+    .artist-banner-image {
+      min-width: 300px;
+      max-width: 300px;
+      position: absolute;
+      top: 45%;
+      left: 80px;
+      transform: translate(0, -45%);
+      z-index: 3;
+      img {
+        @include border-radius(5px);
+      }
+    }
+    .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent
+        linear-gradient(180deg, #000000e5 0%, #00000079 54%, #000000 100%);
+      min-height: 43.75rem;
+      width: 100%;
+      opacity: 0.7;
+      z-index: 2;
+    }
+  }
+  
+  .chart-wrapper {
+    margin-bottom: unset;
+  }
+
+
+  .track-information {
+    position: relative;
+    padding: 0rem 5rem;
+    background-color: #f3f3f3;
+    .track-details {
+      position: relative;
+      .track-top-details {
+        @include display;
+        @include justify(space-between);
+        @include align(center);
+        min-height: 10.875rem;
+        position: absolute;
+        top: -11rem;
+        width: 100%;
+        z-index: 2;
+        .top-details {
+          font-size: 1.125rem;
+          color:  #FFFFFF;
+          &.track-name {
+            font-size: 1.875rem;
+            text-shadow: 2px 2px 2px #00000029;
+           .header-text {
+             margin-bottom: .625rem;
+             width: 31.25rem;
+           }
+            .subheader-text {
+              font-size: 16px;
+            }
+          }
+          &.track-position , &.position-change, &.streams {
+            .header-text{
+              @include display;
+              @include align(center);
+              font-size: 1.75rem;
+              >div {
+                font-size: 1rem;
+                opacity: 0.8;
+                padding-right: 1rem;
+              }
+              .track-trend {
+                .track-trend-update {
+                  font-size: 1.75rem;
+                  .uparrow {
+                    background-color: rgba(82, 214, 0, 0.5);
+                  }
+                  .downarrow {
+                    background-color: rgba(255, 0, 0, 0.5);
+                  }
+                  .equal {
+                    background-color: rgba(134, 134, 134, 0.5);
+                  }
+                }
+                .newupdate {
+                  min-height: 2.1875rem;
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .track-center-details {
+        @include display;
+        @include justify(space-between);
+        @include align(center);
+        min-height: 8.125rem;
+        >div {
+          @include display;
+          @include justify(space-between);
+          width: 100%;
+          .bottom-details {
+            flex: 0 0 20%;
+            max-width: 20%;
+            .header-text{
+              font-size: .875rem;
+              color: rgba(0, 0, 0, 0.5);
+              margin-bottom: .625rem;
+            }
+            .subheader-text {
+            font-size: 1.125rem;
+            }
+          }
+          .page-exit-button{
+            >div{
+              min-height: 2.5rem;
+              padding: 0 1.25rem 0px .5rem;
+              @include border-radius(40px);
+              background-color: #ED1E2433;
+              border: 1px solid #ED1E2480;
+              @include display;
+              @include align;
+              .FontIcon.icon-arrow {
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+      .track-bottom-details{
+        min-height: 7rem;
+      }
+    }
+  }
+  
+  
+  .landing-wrapper {
+    position: relative;
+    margin: 0 5rem;
+      .chart-wrapper {
+        margin-top: 3rem;
+        background: rgba(255, 255, 255, 0.6) 0% 0% no-repeat padding-box;
+        @include border-radius(10px);
+        .chart-header {
+          @include flex-d(flex,flex-start, center);
+          min-height: 5rem;
+          .chart-title {
+            font-size: 1.25rem;
+            margin-bottom: unset;
+            letter-spacing: 0.4px;
+          }
+        }
+        .track-chartwrapper {
+          .position-stream-chartwrapper {
+            @include flex-d(flex, center, baseline);
+            margin-bottom: 1rem;
+            .position-chart {
+              width: 100%;
+              background: #FFFFFF;
+              @include border-radius(10px);
+              padding: 0rem 1.875rem 1.875rem;
+              border: 1px solid rgba(0,0,0,0.04);
+            }
+          }
+          .stream-share-chartwrapper {
+            @include flex-d(flex, space-between, flex-start);
+            .position-chart {
+              flex: 0 0 49%;
+              max-width: 49%;
+              .chart-filter {
+                @include flex-d;
+                min-height: 5rem;
+                margin-bottom: 0rem;
+                .chart-title {
+                  font-size: 1.25rem;
+                  font-family: $medium;
+                  @include display;
+                  @include align;
+                  letter-spacing: 0.4px;
+                  color: #313131;
+                  .FontIcon {
+                    margin-right: 1rem;
+                  }
+                }
+                .filter {
+                  @include display;
+                  @include align;
+                  font-size: 1rem;
+                  .view {
+                    color: rgba(0, 0, 0, 0.6);
+                  }
+                  .Select {
+                    margin-left: 0.625rem;
+                    .FormSelect {
+                      .select-root {
+                        min-width: 16rem;
+                      }
+                    }
+                  }
+                }
+              }
+              background: #FFFFFF;
+              @include border-radius(10px);
+              padding: 0rem 1.875rem 1.875rem;
+            }
+          }
+        }
+      }
+  }
+}
+
+.artistDetails {
+  .chart-wrapper {
+    margin-bottom: 2.5rem;
+  }
+  .page-header {
+    padding: 0rem 5rem;
+    background-color: #f3f3f3;
+    position: relative;
+    .title-label {
+      .title-detail {
+        font-size: 1.875rem;
+        color: #000000;
+        padding-right: 0.9375rem;
+      }
+
+    }
+  }
+}

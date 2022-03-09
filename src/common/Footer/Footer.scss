@@ -1,0 +1,13 @@
+@import "../../assets/styles/global/_global-dir";
+
+.footer {
+  margin-top: 1.875rem;
+  min-height: 6.25rem;
+  @include flex-d;
+  .copyright {
+    font-size: 0.75rem;
+    span {
+      font-family: $medium;
+    }
+  }
+}

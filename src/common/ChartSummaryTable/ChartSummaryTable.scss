@@ -1,0 +1,132 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-summary-table {
+  font-family: $medium;
+
+  .summary-table {
+    margin-bottom: 1.25rem;
+    .chart-content {
+      display: flex;
+      width: 100%;
+      font-size: 1rem;
+      background-color: hsla(0, 0%, 100%, 0.2);
+      .chart-label {
+        min-height: 3.75rem;
+        border: 1px solid #ebedf0;
+        padding: 0rem 1.5rem 0rem 1rem;
+        @include flex-d(flex, center, center);
+        > div {
+          display: block;
+          text-align: center;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      .chart-label.chart-metrics {
+        flex: 0 0 20%;
+        max-width: 20%;
+        @include justify(flex-start);
+        > div {
+          text-align: start;
+          .OuterDivStylesEllipsisToolTipChan{
+          width: unset;
+          padding-right: 1rem;
+          }
+          @include display;
+          @include align;
+          @include justify(flex-start);
+        }
+      }
+      .chart-label {
+        flex: 0 0 16%;
+        max-width: 16%;
+      }
+    }
+    .chart-content.chart-title {
+      background-color: hsla(0, 0%, 100%, 0.6);
+      height: 3.75rem;
+      border-top-left-radius: 0.625rem;
+      border-top-right-radius: 0.625rem;
+      .chart-label {
+        @include justify(center);
+      }
+      .chart-label.chart-metrics {
+        color: red;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        @include justify(flex-start);
+        opacity: 1;
+      }
+      .chart-label {
+        opacity: 0.5;
+      }
+    }
+    &.summary-table .chart-content:nth-child(odd) {
+      background-color: hsla(0, 0%, 100%, 0.6);
+    }
+    &.summary-table > *:last-child {
+      border-bottom-left-radius: 0.625rem;
+      border-bottom-right-radius: 0.625rem;
+      .chart-metrics {
+        border-bottom-left-radius: 0.625rem;
+      }
+      .chart-label4 {
+        border-bottom-right-radius: 0.625rem;
+      }
+    }
+    &.summary-table.track-based {
+      border-radius: unset;
+    }
+  }
+}
+
+.tablelist-header {
+  .tablelist-header-contents {
+    .toggle-switch {
+      padding: 0.1rem 1rem;
+    }
+    .percentage-value,
+    .total-avg {
+      @include display;
+      @include align;
+      .percentage,
+      .Value,
+      .total,
+      .avg {
+        padding: 0rem;
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}
+
+.toggle-switch {
+    .MuiSwitch-root {
+      padding: 0px;
+      width: 1.875rem;
+      height: 0.875rem;
+      .MuiButtonBase-root {
+        color: rgb(245, 0, 87);
+        padding: 0px;
+        .MuiIconButton-label {
+          .MuiSwitch-thumb {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      .MuiSwitch-switchBase.Mui-disabled {
+        color: #bdbdbd !important;
+      }
+      .MuiSwitch-colorSecondary.Mui-disabled + .MuiSwitch-track {
+        background-color: #000 !important;
+      }
+      .MuiSwitch-switchBase.Mui-checked {
+        transform: translateX(16px);
+      }
+      .MuiSwitch-track {
+        background-color: rgba(237, 29, 36, 0.302);
+      }
+    }
+}

@@ -1,0 +1,164 @@
+@import "../../assets/styles/global/_global-dir";
+
+.tablelist {
+  .MuiTableContainer-root {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    .MuiTable-root {
+      background-color: rgb(255, 255, 255);
+      .MuiTableHead-root {
+        .MuiTableRow-root {
+          height: 3.75rem;
+          background-color: rgba(0, 0, 0, 0.02);
+          .MuiTableCell-root {
+            font-family: $medium;
+            font-size: 0.875rem;
+            border-bottom: 1px solid rgb(235, 237, 240);
+            padding: 0rem 1.25rem;
+          }
+        }
+      }
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          background-color: rgba(255, 255, 255, 0.4);
+          &.border-bottom {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+          }
+          .MuiTableCell-root {
+            border-bottom: unset;
+            font-family: $medium;
+            font-size: 1.125rem;
+            .track-streams {
+              font-size: 1.25rem;
+            }
+            .track-name-artist {
+              @include flex-d(flex, flex-start, center);
+              .track-image {
+                @include display;
+                @include align(center);
+                min-width: 140px;
+                max-width: 140px;
+                img {
+                  @include border-radius(10px);
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .track-details {
+                padding-left: 1rem;
+                text-align: left;
+                .track-name {
+                  font-size: 1.25rem;
+                }
+                .artist-details-tablelist {
+                  margin-bottom: 1.4375rem;
+                }
+                .track-by,
+                .track-country {
+                  font-family: $regular;
+                  font-size: 0.875rem;
+                  opacity: 0.7;
+                }
+                .track-by {
+                  margin-bottom: 1.8rem;
+                  display: inline-block;
+                  max-width: 500px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .hidden-content.MuiTableRow-root {
+        .MuiTableCell-root {
+          .MuiCollapse-root {
+            .MuiCollapse-wrapper {
+              .MuiCollapse-wrapperInner {
+                .MuiBox-root {
+                  .MuiTable-root {
+                    border-bottom: 1px solid rgb(235, 237, 240);
+                    .track-empty-div {
+                      width: 14rem;
+                      border: unset;
+                    }
+                    .track-data {
+                      font-family: $medium;
+                      padding-left: 1rem;
+                      .track-subheader {
+                        font-size: 0.875rem;
+                        color: rgba(0, 0, 0, 0.5);
+                        margin-bottom: 0.25rem;
+                      }
+                      .track-header {
+                        font-size: 1rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .MuiTableCell-sizeSmall {
+          padding: 1.6rem 0px;
+          border-bottom: 1px solid rgb(235, 237, 240);
+          border-top: 1px solid rgb(235, 237, 240);
+        }
+      }
+    }
+    .MuiTablePagination-root.table-pagination {
+      min-height: 52px;
+      padding-right: 2px;
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+    }
+  }
+}
+
+//for track position
+.track-trend {
+  @include flex-d(flex, center, center);
+  .newupdate {
+    background-color: rgb(6, 168, 253);
+    color: rgb(255, 255, 255);
+    margin: auto;
+    @include flex-d(flex, center, center);
+    padding: 0 0.75rem;
+    min-height: 1.625rem;
+    @include border-radius(60px);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+  .trendarrow {
+    @include display;
+    padding: 0.31rem;
+    margin-right: 0.85rem;
+    @include border-radius(50px);
+  }
+  .track-trend-update {
+    @include flex-d(flex, center, center);
+    .uparrow {
+      background-color: rgba(82, 214, 0, 0.25);
+      .FontIcon {
+        color: rgb(82, 214, 0);
+      }
+    }
+    .downarrow {
+      background-color: rgba(255, 0, 0, 0.1);
+      transform: rotate(180deg);
+      .FontIcon {
+        color: rgb(255, 0, 0);
+      }
+    }
+    .equal {
+      background-color: rgba(134, 134, 134, 0.1);
+      font-size: 1.25rem;
+      .FontIcon {
+        color: rgb(116, 50, 242);
+      }
+    }
+  }
+}
+.up-arrow {
+  transform: rotate(180deg);
+}

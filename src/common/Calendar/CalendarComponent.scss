@@ -1,0 +1,217 @@
+@import "../../assets/styles/global/_global-dir";
+
+h1{
+    cursor:pointer;
+}
+
+.MuiDialog-root {
+  .MuiDialog-container {
+    .MuiPaper-root {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      box-shadow: 0px 6px 10px #00000029;
+      border: 1px solid #70707019;
+      .MuiDialogTitle-root {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+        height: 60px;
+        @include flex-d;
+        margin-left: auto;
+        background: rgba(255, 255, 255, 0.02);
+        .MuiTypography-root {
+          // font-family: $bold;
+          width: 100%;
+          @include flex-d(flex,space-between, center);
+          font-size: 1rem;
+          font-family: $medium;
+          .calendar-title{
+            @include display;
+            font-size: 1.125rem;
+            .FontIcon{
+              margin-right: 1rem;
+            }
+          }
+          .cross-icon{
+              border-left: 1px solid rgba(0, 0, 0, 0.342);
+              padding-left: 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .FontIcon{
+                  font-size: 1.5rem;
+              }
+          }
+        }
+
+      }
+      .MuiDialogContent-root {
+        padding: 0rem;
+        .calendar-content{
+          padding: 0rem 1rem;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+          .rmdp-wrapper {
+            .rmdp-top-class {
+              .rmdp-calendar  {
+                .rmdp-header{
+                  height: unset;
+                  margin-top: 0px;
+                  min-height: 50px;
+                  .rmdp-arrow-container{
+                    .rmdp-arrow {
+                      height: 10px;
+                      width: 10px;
+                      border: solid rgba(0, 0, 0, 0.178);
+                      border-width: 0 2px 2px 0;
+                    }
+                    &.rmdp-arrow-container:hover {
+                     background-color: unset;
+                     box-shadow: unset;
+                  }
+                  }
+                }
+                .rmdp-day-picker {
+                  .rmdp-week{
+                    .rmdp-week-day{
+                      color: #000000;
+                      font-size: .6875rem;
+                    }
+                    .rmdp-day.rmdp-range{
+                      background-color: #EF4D52; 
+                      color: #fff;
+                      box-shadow: unset;
+                      &.start{
+                        border-bottom-left-radius: 45%;
+                        border-top-left-radius: 45%;
+                      }
+                      &.end{
+                        border-bottom-right-radius: 45%;
+                        border-top-right-radius: 45%;
+                      }
+                      span:hover{
+                        background-color: #EF4D52 !important; 
+                        color: #fff !important;
+                      }
+                    }
+                    .rmdp-day{
+                      width: 47px;
+                      span:hover{
+                        background-color: #ffffff  !important; 
+                        color: rgb(0, 0, 0) !important;
+                      }
+                    }
+                    .rmdp-day.rmdp-today span {
+                      background-color: transparent; 
+                      color: rgb(0, 0, 0);
+                  }
+                  .rmdp-day.rmdp-today span:hover {
+                      background-color: transparent; 
+                      color: rgb(0, 0, 0);
+                  }
+                  .rmdp-day.rmdp-today.rmdp-range{
+                    span{
+                      color: #fff;
+                    }
+                  }
+                  .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
+                    background-color: #EF4D52; 
+                    color: #fff;
+                }
+                  }
+                }
+              }
+            }
+            &.rmdp-shadow {
+              box-shadow: unset;
+            }
+          }
+        }
+        .week-buttons{
+          padding: 0rem 1rem;
+          background-color: rgba(0, 0, 0, 0.02) ;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+            .MuiBox-root{
+                .MuiTabs-root{
+                  @include align(center);
+                  min-height: 4.375rem;
+                  .MuiTabScrollButton-root{
+                      display: none;
+                  }
+                  .MuiTabs-indicator{
+                      display: none;
+                  }
+                  .MuiTabs-scroller {
+                      .MuiTabs-flexContainer {
+                          @include justify(space-between);
+                          padding-right: 0rem;
+                          .MuiButtonBase-root {
+                              min-width: 2.5rem;
+                              min-height: 1.875rem;
+                              padding: 0rem .9375rem;
+                              background-color: rgb(255, 255, 255);
+                              border: 1px solid #00000014;
+                              @include border-radius(20px);
+                              opacity:1;
+                              &.MuiTab-textColorInherit.Mui-selected{
+                                  background-color: rgb(239, 77, 82);
+                                  .MuiTab-wrapper{
+                                      .label{
+                                          color: #FFFFFF;
+                                      }
+                                  }
+                              }
+                              .MuiTab-wrapper{              
+                                  .label{
+                                      letter-spacing: 0px;
+                                      font-size: .75rem;
+                                      color: rgb(49, 49, 49);
+                                      font-family: $medium;
+                                      text-transform: capitalize;
+                                  }
+                              }
+                          }
+                      }                        
+                  }
+                }
+            }
+        }
+      }
+      .MuiDialogActions-root{
+       min-height: 4.375rem;
+      }
+    }
+  }
+}
+
+.MuiMenu-paper {
+  .MuiList-root {
+    padding: 0;
+    .MuiMenuItem-root {
+      min-height: 2.5rem;
+      padding: 0 1rem;
+      border-bottom: 1px solid #fafafa;
+      color: rgb(0, 0, 0);
+      font-size: 0.875rem;
+      .FontIcon {
+        margin-right: 0.625rem;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+.MuiDialog-paperWidthSm {
+  max-width: 700px !important; 
+}
+
+
+
+

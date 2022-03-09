@@ -1,0 +1,97 @@
+@import "../../../assets/styles/global//__global-dir";
+
+.Input {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  .InputField {
+    .input-root {
+      margin-top: 0;
+      border: 1px solid #d9d9d9;
+      background-color: #ffffff;
+      @include border-radius(0.3125rem);
+      min-height: 2.5rem;
+
+      .input-field {
+        min-height: 2.5rem;
+        font-family: $medium;
+        font-size: 1rem;
+        color: #313131;
+        padding: 0 0.9375rem;
+        @include border-radius(0.3125rem);
+
+        &::placeholder {
+          font-family: $regular;
+          color: rgba(0, 0, 0, 0.4);
+        }
+        &::-ms-reveal,
+        &::-ms-clear {
+          display: none;
+        }
+
+        &[type="search"]::-ms-clear {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+
+        &[type="search"]::-ms-reveal {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+
+        /* clears the 'X' from Chrome */
+        &[type="search"]::-webkit-search-decoration,
+        &[type="search"]::-webkit-search-cancel-button,
+        &[type="search"]::-webkit-search-results-button,
+        &[type="search"]::-webkit-search-results-decoration {
+          display: none;
+        }
+
+        &[type="number"]::-webkit-outer-spin-button,
+        &[type="number"]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+        @media only screen and (max-width: 599px) {
+        }
+      }
+      .endAdornment {
+        @include justify(center);
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+        margin-left: -0.9375rem;
+        .FontIcon {
+          font-size: 1.125rem;
+        }
+      }
+      &.input-disabled {
+        border-color: #919191;
+        .input-field {
+          color: #919191;
+        }
+      }
+      &.error {
+        border-color: $error;
+      }
+      &.input-border {
+        min-height: 2.1875rem;
+        @include border-radius(3.75rem);
+        .input-field {
+          min-height: 2.1875rem;
+        }
+        .endAdornment {
+          min-width: 2.1875rem;
+          min-height: 2.1875rem;
+          .FontIcon {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

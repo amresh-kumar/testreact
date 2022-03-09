@@ -1,0 +1,56 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-comparision-page {
+  position: relative;
+  background: url("../../assets/images/svg/chartcomparison_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .chart-comparision-wrapper {
+    margin: 0 5rem;
+  }
+  .page-header {
+    @include direction(row);
+    @include flex-d(flex, flex-start, center);
+    .worldwide-flag{
+      min-width: 3.75rem;
+      max-width: 3.75rem;
+    }
+    .title-label {
+      padding-left: 1.25rem;
+      .title {
+        color: #0032D8;
+      }
+    }
+  }
+}
+
+.city-chart-cmparision {
+  .page-header {
+    @include justify(space-between);
+  .page-header-wrapper {
+    @include display;
+    @include align(center);
+    .country-flag{
+      text-align: center;
+      min-width: 3.75rem;
+      max-width: 3.75rem;
+      img {
+        width: 100%;
+      }
+    }
+    .title-label {
+      padding-left: unset;
+    }
+  }
+  .title-label {
+    .worldwide-flag {
+      min-width: 2.75rem;
+      max-width: 2.75rem;
+    }
+    .title {
+      padding-left: 1.25rem;
+    }
+  }
+ 
+  }
+}
+

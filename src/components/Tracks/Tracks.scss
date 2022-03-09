@@ -1,0 +1,50 @@
+@import "../../assets/styles/global/_global-dir";
+
+.tracks-page {
+  position: relative;
+  background: url("../../assets/images/svg/tracks_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .tracks-wrapper {
+    margin: 0 5rem;
+  }
+  .chart-filter {
+    .filter {
+      .Select {
+        .FormSelect {
+          .select-root {
+            min-width: 11.5rem;
+          }
+        } 
+      }
+    }
+  }
+}
+
+.tablelist-header-title {
+  @include display;
+  @include align;
+  .FontIcon {
+    padding-right: 0.9375rem;
+  }
+}
+
+.page-header {
+  min-height: 6.25rem;
+  @include display;
+  @include justify(center);
+  @include direction;
+  .title-label {
+    @include display;
+    @include align;
+    padding-bottom: 0.3125rem;
+    .title {
+      font-size: 1.5rem;
+      font-family: $medium;
+      color: #4e0bff;
+      padding-right: 0.9375rem;
+    }
+    .FontIcon {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}

@@ -1,0 +1,128 @@
+//font-mixin
+@mixin font-face($font-path, $font-name) {
+
+    @font-face {
+        font-family: $font-name;
+        src: url("#{$font-path}/#{$font-name}.ttf") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+}
+
+// Box Shadow
+@mixin box-shadow($shadow1: 0px 1px 1px rgba(0, 0, 0, 0.1), $shadow2: 0px 1px 1px rgba(0, 0, 0, 0.1)) {
+    -webkit-box-shadow: $shadow1, $shadow2;
+    -moz-box-shadow: $shadow1, $shadow2;
+    -o-box-shadow: $shadow1, $shadow2;
+    box-shadow: $shadow1, $shadow2;
+}
+
+// Single side border-radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// Single side box-sizing
+@mixin box-sizing($box-sizing) {
+    -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+
+// Transitions
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -ms-transform: rotate($degrees); // IE9 only
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+//Background Image
+@mixin background($imgpath, $position:0 0, $repeat: no-repeat, $size: cover) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+//flex
+@mixin flex-d($flex: flex, $justify-content: space-between, $align-items: center) {
+    display: #{'-webkit'}-#{$flex};
+    display: #{'-moz'}-#{$flex};
+    display: #{'-ms'}-#{$flex};
+    display: #{'-o'}-#{$flex};
+    display: $flex;
+
+    -webkit-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+    -ms-justify-content: $justify-content;
+    -o-justify-content: $justify-content;
+    justify-content: $justify-content;
+
+    -webkit-align-items: $align-items;
+    -moz-align-items: $align-items;
+    -ms-align-items: $align-items;
+    -o-align-items: $align-items;
+    align-items: $align-items;
+
+}
+
+@mixin display($flex: flex) {
+    display: #{'-webkit'}-#{$flex};
+    display: #{'-moz'}-#{$flex};
+    display: #{'-ms'}-#{$flex};
+    display: #{'-o'}-#{$flex};
+    display: $flex;
+}
+
+@mixin justify($justify-content: space-between) {
+    -webkit-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+    -ms-justify-content: $justify-content;
+    -o-justify-content: $justify-content;
+    justify-content: $justify-content;
+}
+
+@mixin align($align-items: center) {
+    -webkit-align-items: $align-items;
+    -moz-align-items: $align-items;
+    -ms-align-items: $align-items;
+    -o-align-items: $align-items;
+    align-items: $align-items;
+}
+
+@mixin align-self($align-self: center) {
+    -webkit-align-self: $align-self;
+    -moz-align-self: $align-self;
+    -ms-align-self: $align-self;
+    -o-align-self: $align-self;
+    align-self: $align-self;
+}
+
+@mixin direction($flex-direction: column) {
+    -webkit-flex-direction: $flex-direction;
+    -moz-flex-direction: $flex-direction;
+    -ms-flex-direction: $flex-direction;
+    -o-flex-direction: $flex-direction;
+    flex-direction: $flex-direction;
+}
+
+@mixin flex($flex-grow: 1, $flex-shrink: 1, $flex-basis: auto) {
+    -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+    -moz-flex: $flex-grow $flex-shrink $flex-basis;
+    -ms-flex: $flex-grow $flex-shrink $flex-basis;
+    -o-flex: $flex-grow $flex-shrink $flex-basis;
+    flex: $flex-grow $flex-shrink $flex-basis;
+    min-height: 0;
+}

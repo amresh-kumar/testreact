@@ -1,0 +1,26 @@
+.artists-page {
+  position: relative;
+  background: url("../../assets/images/svg/artists_iconbg.svg") no-repeat top;
+  background-size: cover;
+  .artists-page-wrapper {
+    margin: 0 5rem;
+    .chart-filter {
+      .filter {
+        .Select {
+          .FormSelect {
+            .select-root {
+              min-width: 11.5rem;
+            }
+          } 
+        }
+      }
+    }
+  }
+  .page-header {
+    .title-label {
+      .title {
+        color: #e9008f;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../assets/styles/global/_global-dir";
+
+.tablelistcard {
+  &.benchmark {
+    .MuiTableContainer-root.benchmark-table {
+      .MuiTable-root {
+        .MuiTableBody-root {
+          .MuiTableRow-root {
+            height: 3.75rem;
+            .MuiTableCell-root {
+              .track-image {
+                min-width: 40px;
+                max-width: 40px;
+                height: unset;
+                @include display;
+                @include align;
+                @include border-radius(.3125rem);
+              }
+            }
+            .position-avg {
+              background-color: rgba(151, 151, 151, 0.08);
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

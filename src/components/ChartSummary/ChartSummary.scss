@@ -1,0 +1,51 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-summary {
+  position: relative;
+  background: url("../../assets/images/svg/chartsummary_Iconbg.svg") no-repeat top;
+  background-size: cover;
+  .landing-wrapper {
+    z-index: 1;
+    position: relative;
+    margin: 0 5rem;
+    .landing-header {
+      min-height: 8.75rem;
+      @include display;
+      @include direction;
+      @include justify(center);
+      margin-bottom: 1.25rem;
+      .title {
+        font-size: 1.875rem;
+        font-family: $medium;
+      }
+      .desp {
+        padding-top: 0.3125rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  .page-header {
+    .title-label {
+      .title {
+        color: #ffb100;
+      }
+    }
+  }
+  .Icon-img {
+    width: 100vw;
+    height: 350vh;
+    background: no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 450px;
+    left: 0;
+  }
+}
+.tablelist-header-title {
+  @include display;
+  @include align;
+  .FontIcon {
+    padding-right: 0.9375rem;
+  }
+}
+

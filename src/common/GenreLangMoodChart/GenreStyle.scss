@@ -1,0 +1,33 @@
+@import "../../assets/styles/global/_global-dir";
+
+.chart-title {
+  font-size: 1.25rem;
+  font-family: $medium;
+  margin-bottom: 0.9375rem;
+}
+
+.genre {
+  .chart-filter {
+    margin-bottom: 0;
+  }
+  .MuiTabs-scroller {
+    margin-bottom: 0.9375rem;
+  }
+  .MuiTab-root {
+    min-width: 5rem;
+    padding: 0 0.9375rem;
+    .MuiTab-wrapper {
+      font-family: $medium;
+      font-size: 1rem;
+    }
+  }
+  .filter {
+    .Select {
+      .FormSelect {
+        .select-root {
+          min-width: 11.5rem;
+        }
+      }
+    }
+  }
+}

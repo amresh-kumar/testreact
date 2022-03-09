@@ -1,0 +1,18 @@
+@import "../../assets/styles/global/_global-dir";
+
+.banner-img {
+  background: no-repeat top;
+  background-size: cover;
+  min-height: 43.75rem;
+  background-color: #000000;
+}
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent
+    linear-gradient(180deg, #000000e5 0%, #00000079 54%, #000000 100%);
+  min-height: 43.75rem;
+  width: 100%;
+  opacity: 0.6;
+}

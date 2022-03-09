@@ -1,0 +1,68 @@
+@import "../../../assets/styles/global/_global-dir";
+
+.Select {
+  .FormSelect {
+    .select-root {
+      @include border-radius(0.3125rem);
+      @include display;
+      @include align;
+      min-height: 2.5rem;
+      background-color: #ffffff;
+      border: 1px solid #d9d9d9;
+      font-family: $regular;
+      font-size: 1rem;
+      padding: 0 0.9375rem;
+      color: #000000;
+
+      &.select-disabled {
+        border-color: #919191;
+        color: #919191;
+      }
+    }
+  }
+  svg {
+    margin-right: .75rem;
+    background-color: transparent;
+  }
+}
+
+.select-menu-item {
+  [class*="-paper"] {
+    box-shadow: 0 calcVh(4) calcVh(15) rgba(74, 74, 74, 0.202961);
+    border-radius: calcVh(10);
+    //border-bottom-left-radius: 0;
+  }
+  [class*="-root"] {
+    font-family: $medium;
+    font-size: 1rem;
+  }
+  [class*="-root"][class*="-list"] {
+    padding: 0;
+    li {
+      font-size: 1rem;
+      min-height: 2.5rem;
+      color: "";
+      &:first-child {
+        border-bottom: 0px solid;
+        color: #000;
+        opacity: 0.4;
+        &[class*="-selected"] {
+          background-color: #fafafa;
+          color: #000000;
+          &:hover {
+            background-color: #fafafa;
+            color: #000000;
+          }
+        }
+      }
+      &[class*="-selected"],
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.04);
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+    }
+  }
+}

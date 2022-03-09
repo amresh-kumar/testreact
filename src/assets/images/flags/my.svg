@@ -1,0 +1,14 @@
+<svg id="_207-malaysia" data-name="207-malaysia" xmlns="http://www.w3.org/2000/svg" width="30" height="30.002" viewBox="0 0 30 30.002">
+  <circle id="Ellipse_415" data-name="Ellipse 415" cx="15" cy="15" r="15" fill="#f0f0f0"/>
+  <g id="Group_1500" data-name="Group 1500" transform="translate(0.517 3.261)">
+    <path id="Path_1531" data-name="Path 1531" d="M244.87,193.13h15.652a15.016,15.016,0,0,0-.517-3.913H244.87Z" transform="translate(-231.039 -181.391)" fill="#d80027"/>
+    <path id="Path_1532" data-name="Path 1532" d="M244.87,59.565h13.451a15.078,15.078,0,0,0-3.461-3.913H244.87Z" transform="translate(-231.039 -55.652)" fill="#d80027"/>
+    <path id="Path_1533" data-name="Path 1533" d="M105.98,459.609a14.936,14.936,0,0,0,9.337-3.261H96.643A14.936,14.936,0,0,0,105.98,459.609Z" transform="translate(-91.497 -432.87)" fill="#d80027"/>
+    <path id="Path_1534" data-name="Path 1534" d="M10.5,326.7H36.1a14.912,14.912,0,0,0,1.685-3.913H8.819A14.91,14.91,0,0,0,10.5,326.7Z" transform="translate(-8.819 -307.13)" fill="#d80027"/>
+  </g>
+  <path id="Path_1535" data-name="Path 1535" d="M15,15V0A15,15,0,0,0,0,15Z" fill="#0052b4"/>
+  <g id="Group_1501" data-name="Group 1501" transform="translate(3.983 4.565)">
+    <path id="Path_1536" data-name="Path 1536" d="M73.965,86.188a3.709,3.709,0,1,1,1.764-6.973,4.565,4.565,0,1,0,0,6.527A3.694,3.694,0,0,1,73.965,86.188Z" transform="translate(-67.973 -77.914)" fill="#ffda44"/>
+    <path id="Path_1537" data-name="Path 1537" d="M145.081,111.3l.659,1.377,1.487-.344-.666,1.373,1.2.948-1.489.336,0,1.526-1.191-.955-1.191.955,0-1.526-1.489-.336,1.2-.948-.666-1.373,1.487.344Z" transform="translate(-138.044 -109.348)" fill="#ffda44"/>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+@import "../../assets/styles/global/_global-dir";
+
+.carousel-wrapper {
+  width: 100%;
+  min-height: 28.125rem;
+  max-height: 28.125rem;
+  background: no-repeat top;
+  background-size: cover;
+  padding: 0 5rem;
+  padding-top: 9.375rem;
+  background-color: #000000;
+
+  .carousel-details {
+    @include display;
+    @include align;
+    .img-block {
+      min-width: 15rem;
+      min-height: 15rem;
+      max-width: 15rem;
+      max-height: 15rem;
+      margin-right: 3.75rem;
+      border-radius: 0.625rem;
+    }
+    .heading-block {
+      color: #ffffff;
+      font-family: $bold;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      .year {
+        font-family: $regular;
+        font-size: 1.25rem;
+        padding-top: 1.25rem;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  .slick-dots {
+    bottom: 1.5625rem;
+    margin-left: 5rem;
+    width: 15rem;
+    li {
+      width: 0.625rem;
+      height: 0.625rem;
+      margin: 0 0.1875rem;
+      button {
+        width: 0.625rem;
+        height: 0.625rem;
+        &::before {
+          color: #ffffff;
+          opacity: 0.3;
+          font-size: 0.5rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          line-height: 0.625rem;
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            color: #ffffff;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
